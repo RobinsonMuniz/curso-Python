@@ -1,0 +1,40 @@
+<script>
+    var nome, nota1, nota2;
+    function calcularMedia(nota1, nota2){
+            return(parseFloat(nota1) + parseFloat(nota2))/2;
+    }
+    function exibirResultado(media){
+        var Resultado;
+        if(media >= 6.5){
+            resultado = "APROVADO";
+        } else {
+            resultado = "REPROVADO";
+        }
+        return resultado;
+    }
+    function verificarErro(valor){
+        if(number.isNaN(valor)){
+            alert("A nota digitada não é um número");
+        }
+    }
+    nome = prompt("Digite o nome do aluno," ,"");
+
+    do{
+        nota1 = parseFloat(prompt("Digite a primeira nota"));
+
+       verificarErro(not1);
+    }  while (number.isNaN(nota1));
+
+    do{
+     nota2 = parseFloat(prompt("Digite a segunda nota"));
+
+     verificarErro(nota2);            
+      } while (number.isNaN(nota2));
+
+    media = calcularMedia(nota1, nota2);
+    if(media > 6.5){
+        document.write("APROVADO!");
+    } else {
+        document.write("REPROVADO!");
+    }
+</script>
